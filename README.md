@@ -12,11 +12,11 @@ RSSI decoding (low-pass filter and ADC or unfiltered PWM decoding) from FrSky X8
 (OPTIONAL) NAZA flight mode decoding from LED port (see minnazaosd for resistor network and ADC pin).
 Prior Work
 
-minnazaosd Standalone minimOSD 1.1 running custom software. 
+minnazaosd Standalone minimOSD 1.1 running custom software.  https://code.google.com/p/minnazaosd/
 
 Replaces MAVLink with NAZA GPS protocol on the hardware UART RX pin (on minimOSD 1.1 6-pin edge connector). Supports PWM decoding of NAZA gimbal outputs (F1/F2 ports) for artificial horizon. Supports analog RSSI decoding (0-1.1V). Requires soldering to tiny Atmega 328p pins for anything other than GPS. I have implemented minnazaosd on a minimOSD 1.1 for the features above (including soldering).
 
-bagaosd Arduino Pro Mini 5V + minimOSD 1.1 running stock or lightly-modified software. 
+bagaosd Arduino Pro Mini 5V + minimOSD 1.1 running stock or lightly-modified software.  https://code.google.com/p/bagaosd/ http://git.razvi.ro/?p=minimosd-extra-frsky.git
 
 Uses the single hardware UART receive pin on the Arduino to decode NAZA GPS serial and uses the SendOnlySoftwareSerial library to send MAVLink serial protocol to the minimOSD from an Arduino digital pin (pin 8). Since the Pro Mini has only one UART RX/TX, and the RX is used for GPS, there is no hardware UART available to decode the 57600 baud FrSky S.PORT protocol.
 
